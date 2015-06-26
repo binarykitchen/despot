@@ -1,18 +1,20 @@
-module.exports = function(){
+var util         = require('util'),
+    events       = require('events'),
+    EventEmitter = events.EventEmitter
 
-  var events = require('events');
-  var EventEmitter = events.EventEmitter;
+module.exports = function() {
 
-  var emitter = function() {
-    if(arguments.callee._singletonInstance) {
-      return arguments.callee._singletonInstance;
+  var Despot = function() {
+
+    if (arguments.callee._singletonInstance) {
+      return arguments.callee._singletonInstance
     }
 
-    arguments.callee._singletonInstance = this;  
-    EventEmitter.call(this);
-  };
-  
-  emitter.prototype.__proto__ = EventEmitter.prototype;
+    arguments.callee._singletonInstance = this
+    EventEmitter.call(this)
+  }
 
-  return new emitter();
-}();
+  util.inherits(Despot, EventEmitter)
+
+  return new Despot()
+}()

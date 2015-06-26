@@ -1,10 +1,10 @@
 {
-  "name": "node-singleton-event",
-  "version": "0.0.3",
-  "description": "A global event bus driven by a singlton event emitter class.",
+  "name": "despot",
+  "version": "1.0.0",
+  "description": "A global event bus driven by a singlton event emitter class that also works on silly browsers ... IE.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/test.js -t 10000"
   },
   "keywords": [
     "event",
@@ -13,20 +13,30 @@
     "emitter"
   ],
   "author": {
-    "name": "teawithfruit",
-    "email": "teawithfruit@gmail.com"
+    "name": "Michael Heuberger",
+    "email": "michael.heuberger@binarykitchen.com"
+  },
+  "contributors": [
+      {
+        "name": "teawithfruit",
+        "email": "teawithfruit@gmail.com"
+      }
+  ],
+  "readmeFilename": "README.md",
+  "engines": {
+      "iojs": ">=2.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/teawithfruit/node-singleton-event.git"
+    "url": "https://github.com/binarykitchen/despot"
   },
-  "homepage": "https://github.com/teawithfruit/node-singleton-event",
+  "homepage": "https://github.com/binarykitchen/despot",
   "bugs": {
-    "url": "https://github.com/teawithfruit/node-singleton-event/issues"
+    "url": "https://github.com/binarykitchen/despot/issues"
   },
   "license": "ISC",
   "devDependencies": {
-    "chai": "^2.2.0",
-    "mocha": "^2.2.4"
+    "chai": "2.2.0",
+    "mocha": "2.2.4"
   }
 }

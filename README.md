@@ -1,12 +1,16 @@
-# node-singleton-event
+[![Build Status](https://travis-ci.org/binarykitchen/despot.svg?branch=master)](https://travis-ci.org/binarykitchen/despot)
 
-[![Join the chat at https://gitter.im/teawithfruit/node-singleton-event](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/teawithfruit/node-singleton-event?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+# Despot
 
 A global event bus driven by a singlton event emitter class. Use this module to hook something in other objects.
 
+Originally forked from https://github.com/teawithfruit/node-singleton-event with the difference that it also works on silly browsers ... IE.
+
+Beware it's very controversial to have a singleton acting as an event emitter. Depends on your app architecture. The fact that nodejs/iojs caches any `module.exports` makes it easy to build one. IMO it's useful for rapid prototyping but not recommended for high performance apps.
+
 ## Install
 ```
-npm install node-singleton-event -save
+npm i -S despot
 ```
 
 ## How to use
@@ -14,14 +18,14 @@ Require it in every file where you want to communicate with another file.
 
 Say something:
 ```
-var singletonevent = require('node-singleton-event');
-singletonevent.emit('talk', 'hello world');
+var despot = require('despot');
+despot.emit('talk', 'hello world');
 ```
 
 Receive something:
 ```
-var singletonevent = require('node-singleton-event');
-singletonevent.on('talk', function(value) {
+var despot = require('despot');
+despot.on('talk', function(value) {
   console.log(value);
 });
 ```
