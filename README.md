@@ -18,14 +18,14 @@ Require it in every file where you want to communicate with another file.
 
 Say something:
 ```js
-var despot = require('despot');
-despot.emit('talk', 'hello world');
+var despot = require('despot')
+despot.emit('talk', 'hello world')
 ```
 
 Receive something:
 ```js
-var despot = require('despot');
-despot.on('talk', function(value) {
-  console.log(value);
-});
+var despot = require('despot')
+despot.on('talk', function (value) {
+  console.log(value)
+})
 ```

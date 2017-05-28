@@ -1,6 +1,6 @@
 {
   "name": "despot",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A global event bus driven by a singleton event emitter class that also works on silly browsers ... IE.",
   "main": "index.js",
   "scripts": {
@@ -17,14 +17,14 @@
     "email": "michael.heuberger@binarykitchen.com"
   },
   "contributors": [
-      {
-        "name": "teawithfruit",
-        "email": "teawithfruit@gmail.com"
-      }
+    {
+      "name": "teawithfruit",
+      "email": "teawithfruit@gmail.com"
+    }
   ],
   "readmeFilename": "README.md",
   "engines": {
-      "iojs": ">=2.0.0"
+    "nodejs": ">=4.2.0"
   },
   "repository": {
     "type": "git",
@@ -36,7 +36,10 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "chai": "2.2.0",
-    "mocha": "2.2.4"
+    "chai": "4.0.0",
+    "mocha": "3.4.2"
+  },
+  "dependencies": {
+    "global": "4.3.2"
   }
 }
