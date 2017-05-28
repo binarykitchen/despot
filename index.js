@@ -1,6 +1,6 @@
 var util = require('util')
 var global = require('global')
-var EventEmitter = require('events').EventEmitter
+var EventEmitter = require('events')
 
 var makeDespot = function () {
   var Despot = function () {

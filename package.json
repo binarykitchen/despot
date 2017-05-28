@@ -1,6 +1,6 @@
 {
   "name": "despot",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A global event bus driven by a singleton event emitter class that also works on silly browsers ... IE.",
   "main": "index.js",
   "scripts": {
