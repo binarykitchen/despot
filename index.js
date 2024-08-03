@@ -1,20 +1,20 @@
-var util = require('util')
-var global = require('global')
-var EventEmitter = require('events')
+var inherits = require("inherits");
+var global = require("global");
+var EventEmitter = require("events");
 
 var makeDespot = function () {
   var Despot = function () {
     if (global._singletonDespotInstance) {
-      return global._singletonDespotInstance
-    } else {
-      global._singletonDespotInstance = this
-      EventEmitter.call(this)
+      return global._singletonDespotInstance;
     }
-  }
 
-  util.inherits(Despot, EventEmitter)
+    global._singletonDespotInstance = this;
+    EventEmitter.call(this);
+  };
 
-  return new Despot()
-}
+  inherits(Despot, EventEmitter);
 
-module.exports = makeDespot()
+  return new Despot();
+};
+
+module.exports = makeDespot();

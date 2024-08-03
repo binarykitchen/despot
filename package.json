@@ -1,6 +1,6 @@
 {
   "name": "despot",
-  "version": "1.1.3",
+  "version": "2.0.0",
   "description": "A global event bus driven by a singleton event emitter class that also works on silly browsers ... IE.",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,8 @@
   ],
   "readmeFilename": "README.md",
   "engines": {
-    "node": ">=4.2.0"
+    "node": "^20.12.2",
+    "npm": "^10.5.0"
   },
   "repository": {
     "type": "git",
@@ -36,10 +37,12 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "chai": "4.0.0",
-    "mocha": "3.4.2"
+    "chai": "5.1.1",
+    "mocha": "10.7.0",
+    "prettier": "3.3.3"
   },
   "dependencies": {
-    "global": "4.3.2"
+    "global": "4.4.0",
+    "inherits": "2.0.4"
   }
 }

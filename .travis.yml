@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "4.2.0"
+  - "20.12.2"
 notifications:
   email:
     on_success: never
